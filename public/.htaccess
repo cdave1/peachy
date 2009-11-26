@@ -1,0 +1,7 @@
+Options -MultiViews -Indexes
+RewriteEngine On
+RewriteBase /
+RewriteCond $1 !images|downloads|stylesheet|page|js
+RewriteRule ^([^\./]+)/(.*) /$1.php/$2 [L]
+RewriteCond $1 !images|downloads|stylesheet
+RewriteRule ^([^\.]+)$ /$1.php [L]
